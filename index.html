@@ -1,0 +1,23 @@
+<html lang="en" ng-app="angular1.x.demo">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+</head>
+
+<body>
+    <div class="container" ng-controller="myContro">
+        <form action="" name="myForm">
+            名字：<input type="email" name="myName" ng-model="text">
+            <span ng-show="myForm.myName.$error.email">这不是一个合法的邮箱地址</span>
+
+            {{myForm}}
+        </form>
+    </div>
+</body>
+
+</html>
